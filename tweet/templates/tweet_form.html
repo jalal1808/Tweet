@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+TweetHq
+{% endblock title %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="col-12 col-md-6">
+        <h2 class="text-center">
+            {% if form.instance.pk %}
+            Edit Tweet
+            {% else %}
+            Create Tweet
+            {% endif %}
+        </h2>
+        <form method="post" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="text-center">
+                <button class="btn btn-outline-warning" type="submit">Submit</button>
+                <a href="{% url 'tweet_list' %}" class="btn btn-outline-warning">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
