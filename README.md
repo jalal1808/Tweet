@@ -1,58 +1,49 @@
-TweetHQ – A Simple Twitter Clone
-TweetHQ is a dynamic web application designed to replicate essential Twitter-like features. Built with Django and Bootstrap, it provides a clean, user-friendly interface for managing tweets and user accounts.
+# TweetHq
 
-Pre-Requisites
-Install Python: Download and install the latest version of Python from [https://www.python.org/downloads/].
-Install Django: Install Django either globally or within a virtual environment:
+TweetHQ is a dynamic web application built with *Django* and *Bootstrap* that lets users register, log in, create tweets, and search for tweets by username. The project focuses on providing essential social media functionality with user authentication and CRUD operations.
 
+
+## Pre-Requisites:
+
+1. Install the latest version of Python [ https://www.python.org/downloads/ ]
+
+2. Install the latest version of Django either globally or within a dedicated virtual environment
+```bash
 pip install django
+```
 
-Install Required Libraries: 
+## How to run this project?
 
-pip install pillow
+**Then, Enter the project directory**
+```
+$  cd tweethq
+```
 
-Setup Instructions
-1. Clone the Repository
-Clone the project repository to your local system:
+**Activate Virtual Environment, if you don't have an environment, please don't follow this steps.**
 
-git clone https://github.com/your-repo/tweethq.git
-2. Navigate to the Project Directory
+For Windows
+```
+$  source venv/scripts/activate
+```
 
-cd tweethq
-3. Set Up a Virtual Environment (Optional)
-It’s recommended to use a virtual environment to manage dependencies.
+For Linux and Mac
+```
+$  source venv/bin/activate
+```
 
-Windows:
+**Install Requirements from 'requirements.txt'**
+```python
+$  pip install -r requirements.txt
+```
 
-python -m venv venv
-source venv/scripts/activate
-Linux/Mac:
+**6. Now Run Server**
 
-python3 -m venv venv
-source venv/bin/activate
-4. Install Requirements
-Install all dependencies listed in the requirements.txt file:
+Command for Windows:
+```python
+$ python manage.py runserver
+```
 
-pip install -r requirements.txt
-5. Apply Database Migrations
-Run migrations to set up the database:
+Command for Linux or Mac:
+```python
+$ python3 manage.py runserver
 
-python manage.py migrate
-6. Run the Development Server
-Start the server using the following commands:
-
-Windows:
-
-python manage.py runserver
-Linux/Mac:
-
-python3 manage.py runserver
-Usage Instructions
-Open the application in your browser at http://127.0.0.1:8000/.
-Register an account or log in using an existing account.
-Create, edit, and delete tweets using the intuitive UI.
-Use the search bar to find tweets by a specific username.
-Future Enhancements
-Add like and retweet functionality for user engagement.
-Implement real-time notifications for new tweets.
-Optimize the search feature with asynchronous processing for faster results.
